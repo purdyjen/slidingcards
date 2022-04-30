@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+    <!-- This tells the computer that this is an html file -->
+<html lang="en"> 
+    <!-- This tells the browser the language is English. -->
   <head>
+    <!-- The head tag is used to contain metadata about the HTML document. This data is not displayed to the user. -->
     <meta charset="UTF-8" />
+    <!-- defines the character set used -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Unnecessary unless you must support legacy browsers. More info here: https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets the viewport to (help) make your website look good on all devices -->
     <link rel="stylesheet" href="style.css" />
+    <!-- The link element defines the relationship between the current document and an external resource. Most often used to link external style sheets -->
     <title>Sliding Cards</title>
+    <!-- The title element defines the title, very important for SEO -->
   </head>
   <body>
+    <!-- defines the document's body -->
     <div class="container">
+      <!-- defines a section in a document, but semantically vague -->
       <div
         class="panel active"
         style="
           background-image: url('https://picsum.photos/id/1003/600/900');
         "
       >
+      <!-- sets the background image of an html element -->
         <h3>Explore The World</h3>
+        <!-- defines the HTML headings, levels 1-6 available with 1 being the most important (and often largest) -->
       </div>
       <div 
         class="panel"
@@ -52,5 +64,6 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- defines a client-side script, links an external script file, among the last of the files to be rendered, which is standard practice so that the html and css render first -->
   </body>
 </html>

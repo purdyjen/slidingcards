@@ -1,64 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
+/* imports a Google font to be rendered on the page */
 
 * {
   box-sizing: border-box;
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not */
 }
 
 body {
+  /* references a specific type of element (body), can be used to select all elements of a specific type. More specific selectors get prioritized over this type of selector */
   font-family: 'Muli', sans-serif;
+  /* defines the font family, which in this case is imported on line 1 */
   display: flex;
+  /* specifies how elements should be displayed: none, inline, block, inline-block, grid, flex are most common */
   align-items: center;
+  /*  defines how elements are aligned across the horizontal axis */
   justify-content: center;
+  /* specifies the alignment between items inside a flexible container when items do not use all available space */
   height: 100vh;
+  /* sets the height of the body section to 100% of viewport height */
   overflow: hidden;
+  /* specifies what happens to content that overflows an element's box */
   margin: 0;
+  /* sets the margin of the body element to 0 */
 }
 
 .container {
+  /* the . references a specific class rather than a type of element */
   display: flex;
+  /* specifies how elements should be displayed: none, inline, block, inline-block, grid, flex are most common */
   width: 90vw;
+  /* sets the width of the container to 90% of the viewport width */
 }
 
 .panel {
   background-size: cover;
+  /* Resizes the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges */
   background-position: center;
+  /* sets position of the background to be centered. The property accepts two values: the first is for the x-axis, second is for y-axis. if only one keyword specified, the other value is center */
   background-repeat: no-repeat;
+  /* sets if/how a background image will be repeated */
   height: 80vh;
+  /* sets height of the container to 80% of viewport height */
   border-radius: 50px;
+  /* this property allows rounding of element corners. Can have from one to four values. One value sets all corners. Two values: first applies to TL and BR, second to TR and BL. Three: first is TL, second is TR and BL, third is BR. Four: values set in clockwise direction beginning with TL */
   color: #fff;
+  /* sets color of text */
   cursor: pointer;
+  /* specifies the type of mouse cursor to be displayed when pointing over an element. See cursor types here: https://www.w3schools.com/cssref/playit.asp?filename=playcss_cursor&preval=alias */
   flex: 0.5;
+  /* shorthand property for flex-grow, flex-shrink, and flex-basis properties. More info: https://www.w3schools.com/cssref/css3_pr_flex.asp */
   margin: 10px;
+  /* sets margin of panel-class elements to 10 pixels */
   position: relative;
-  -webkit-transition: all 700ms ease-in;
+  /* specifies type of positioning method for an element: static, relative, absolute, or fixed. https://www.w3schools.com/cssref/pr_class_position.asp */
+  transition: all 700ms ease-in; 
+  -webkit-transition: all 700ms ease-in; 
+  /* part of the CSS syntax used to render content for Safari and Chrome browsers, which use the WebKit rendering engine.
+  More info: https://css3gen.com/css3-webkit/
+  */
 }
 
 .panel h3 {
   font-size: 24px;
+  /* sets font size of text within relevant elements */
   position: absolute;
+  /* specifies type of positioning method for an element: static, relative, absolute, or fixed. https://www.w3schools.com/cssref/pr_class_position.asp */
   bottom: 20px;
+  /* IF position is absolute or fixed, then this sets the bottom edge of the element relevant to nearest element */
   left: 20px;
+  /* IF position is absolute or fixed, then this sets the left edge of the element relevant to nearest element */
   margin: 0;
+  /* sets margin to 0 */
   opacity: 0;
+  /* sets opacity to 0 */
 }
 
 .panel.active {
   flex: 5;
+  /* sets how much an item will grow relevant to the rest of the flexible items inside its parent container. The higher the number, the more it grows */
 }
 
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+  /* shorthand property for all transition properties in this order: transition-property, transition-duration, transition-timing-function, and transition-delay. ALWAYS specify duration property or else default duration is 0s and the transition will have no effect. More details here: https://www.w3schools.com/cssref/css3_pr_transition.asp */
 }
 
 @media (max-width: 480px) {
+  /* Media query. Used to apply different styling rules for different media with the goal being to deliver a responsive web design. Media queries can be used to check many things: width and height of viewport, width and height of device, orientation (portrait or landscape mode), and resolution. This specific query sets the style rules that are to be changed for any devices with a max width of 480 pixels. */
   .container {
     width: 100vw;
+    /* this changes the container width from 90% of available width to 100% */
   }
 
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
   }
+  /* This section of code makes use of a CSS property called pseudo classes, which is used to define a special state of an element. This particular selector selects every .panel element that is the fourth or fifth child of its parent element. Read more about pseudo classes here: https://www.w3schools.com/css/css_pseudo_classes.asp */
 }
