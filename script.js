@@ -24,7 +24,7 @@ const panels = document.querySelectorAll('.panel')
 
 panels.forEach(panel => {
     panel.addEventListener('click', () => {
-        // tells the browser to "listen" for a specific event (i.e., a click) and then to run a specific set of actions when that event happens
+        // tells the browser to "listen" for a specific event (i.e., a click) on each panel and then to run a specific set of actions when that event happens
         removeActiveClasses()
         // removes the class active from any panel other than the one clicked that currently has it
         panel.classList.add('active')
