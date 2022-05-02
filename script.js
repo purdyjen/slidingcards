@@ -1,3 +1,5 @@
+// JavaScript handles the behavior of a website and is also capable of changing the content to be unique for each user
+
 // Part of the reason why JavaScript is so powerful is because of something called the Document Object Model (DOM)
 // https://www.amazon.com/gp/product/1118907442/ref=dbs_a_def_rwt_bibl_vppi_i4
 // From the book "JavaScript and jQuery" by Jon Ducket, page 183:

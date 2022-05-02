@@ -1,3 +1,5 @@
+/* CSS handles the design of the website. */
+
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 /* imports a Google font to be rendered on the page */
 
@@ -9,7 +11,7 @@
 body {
   /* references a specific type of element (body), can be used to select all elements of a specific type. More specific selectors get prioritized over this type of selector */
   font-family: 'Muli', sans-serif;
-  /* defines the font family, which in this case is imported on line 1 */
+  /* defines the font family, which in this case is imported on line 3 */
   display: flex;
   /* specifies how elements should be displayed: none, inline, block, inline-block, grid, flex are most common */
   align-items: center;
